@@ -1,0 +1,31 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view><nav-bar navbar-data='{{nvabarData}}' back='{{true}}'></nav-bar></view>
+<view class='container' style="padding-top:{{height}}px">
+  <view class='container-con'>
+    <view class='container-item'>
+      <view class='label'></view>
+      <view class='content'>Blue Box Wholesale是Blue Box Kids 旗下为店主提供全球货源直采服务平台。货源来自品牌直接提供，正品授权，来自欧美，澳新，日韩市场等100+品牌供您挑选采购。</view>
+    </view>
+     <view class='container-item'>
+      <view class='label'></view>
+      <view class='content'>货源直采，品牌直供，为您去掉中间所有环节，将全球好品牌好产品第一时间推送给你。我们希望Bring brands and buyers together anytime anywhere.</view>
+    </view>
+
+
+    <view class='container-item'>
+      <view class='label'>公司地址：</view>
+      <view class='content'>上海市长宁区福泉路99号</view>
+    </view>
+    <view class='container-item'>
+      <view class='label'>公司电话：</view>
+      <view class='content'>400-860-7907</view>
+    </view>
+    <view class='container-item'>
+      <view class='label'>公司官网：</view>
+      <view class='content'>www.blueboxkids.com</view>
+    </view>
+  </view>
+  <!-- <view class='store-pic'>
+    <image src='../../images/goods.png'></image>
+  </view> -->
+</view>

@@ -1,0 +1,33 @@
+/* components/swiper/swiper.js.wxss */
+
+.swiper-con {
+  width: 690rpx;
+  height: 520rpx;
+}
+
+.swiper-con swiper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.swiper-con swiper .swiper_item {
+  width: 670rpx;
+  height: 100%;
+}
+
+.swiper-con swiper image {
+  width: 670rpx;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.swiper_item {
+  /* padding-left: 5px;
+  padding-right: 5px */
+}
+
+.slide-image {
+  /* padding-left: 10px;
+  padding-right: 15px; */
+}

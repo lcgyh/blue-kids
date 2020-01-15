@@ -1,0 +1,10 @@
+<!--components/swiper/swiper.js.wxml-->
+<view class='swiper-con'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="#B0D7D7" indicator-color='#FFFFFF'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="swiper_item">
+        <image src="{{item.bannerPic}}" class="slide-image" data-goodsId="{{item.spuId}}" bindtap='itemBand' mode='aspectFill'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

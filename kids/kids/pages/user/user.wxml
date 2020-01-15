@@ -1,0 +1,89 @@
+<!--pages/user/user.wxml-->
+<view><nav-bar navbar-data='{{nvabarData}}' back='{{false}}'></nav-bar></view>
+<view class='container' style="padding-top:{{height}}px">
+  <view class='user-top'>
+    <image src='../../images/user-bg.png' class='w100 h100' />
+    <view class="userinfo">
+      <block>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class='order-center'>
+      <view class='order-center-con'>
+        <view class='title'>
+          <view class='title-l'>我的订单</view>
+          <view class='title-r' bindtap='goOrderPage' data-odStatus='1'>查看全部订单 ></view>
+        </view>
+        <view class='menu'>
+          <view class='menu-item' bindtap='goOrderPage' data-odStatus='2'>
+            <view class='menu-icon'>
+              <image src='../../images/pending.png'></image>
+            </view>
+            <view class='menu-text'>待付款</view>
+          </view>
+          <view class='menu-item' bindtap='goOrderPage' data-odStatus='3'>
+            <view class='menu-icon '>
+              <image src='../../images/shipped.png'></image>
+            </view>
+            <view class='menu-text'>待发货</view>
+          </view>
+          <view class='menu-item' bindtap='goOrderPage' data-odStatus='4'>
+            <view class='menu-icon'>
+              <image src='../../images/transport.png'></image>
+            </view>
+            <view class='menu-text'>已发货</view>
+          </view>
+          <view class='menu-item' bindtap='goOrderPage' data-odStatus='1'>
+            <view class='menu-icon'>
+              <image src='../../images/allOrder.png'></image>
+            </view>
+            <view class='menu-text'>全部</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view class='menu-list-bar'>
+    <view class='menu-list-bar-item'>
+      <view class='menu-list-bar-item-con' bindtap='goStorePage'>
+        <view class='menu-list-bar-item-con-l'>门店信息</view>
+        <view class='menu-list-bar-item-con-r'>
+          <image src='../../images/more.png' class="w100 h100"></image>
+        </view>
+      </view>
+    </view>
+    <view class='menu-list-bar-item'>
+      <view class='menu-list-bar-item-con' bindtap='getWxAddress'>
+        <view class='menu-list-bar-item-con-l'>收货地址</view>
+        <view class='menu-list-bar-item-con-r'>  <image src='../../images/more.png' class="w100 h100"></image></view>
+      </view>
+    </view>
+
+
+    <view class='menu-list-bar-item'>
+      <view class='menu-list-bar-item-con'>
+
+        <button class='menu-list-bar-item-con-btn' open-type="contact" show-message-card bindcontact='bindcontact'>
+          <view class='menu-list-bar-item-con-l'>联系客服</view>
+          <view class='menu-list-bar-item-con-r'>  <image src='../../images/more.png' class="w100 h100"></image></view>
+        </button>
+
+        <!-- <view class='menu-list-bar-item-con-r'>></view> -->
+      </view>
+    </view>
+    <view class='menu-list-bar-item'>
+      <view class='menu-list-bar-item-con' bindtap='goAboutUsPage'>
+        <view class='menu-list-bar-item-con-l'>关于Blue Box Wholesale
+        </view>
+        <view class='menu-list-bar-item-con-r'>  <image src='../../images/more.png' class="w100 h100"></image></view>
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

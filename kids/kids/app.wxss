@@ -1,0 +1,21 @@
+/**app.wxss**/
+/* page{
+  height: 100%
+} */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: #F6F6F6
+} 
+.tc{
+  text-align: center;
+}
+.w100{
+  width: 100%;
+}
+.h100{
+  height: 100%;
+}

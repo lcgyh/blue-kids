@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='banner-bg'>
+    <image src='../../images/bannerBg.png' class='w100 h100' />
+    <view style="position:absolute;left:50%;top:{{navHehghtText+35}}px;width:690rpx;margin-left:-335rpx;font-size:40rpx;color:#fff;font-weight:bold">Blue Box Wholesale</view>
+    <view style="position:absolute;left:50%;top:{{navHehghtText+65}}px;margin-left:-335rpx;font-size:22rpx;color:#59A0A6;background:#fff;padding:5rpx 10rpx;border-radius:0 10rpx 10rpx 10rpx">一键直采全球</view>
+    <view style='position:absolute;left:50%;top:280rpx;margin-left:-345rpx;'>
+      <Swiper imgUrls='{{bannerList}}' bindgoGoodsInfo='goGoodsInfo'></Swiper>
+    </view>
+  </view>
+  <view class='active-models'>
+    <view class='active-model' wx:if="{{activitySkills.length>0}}">
+      <view class='title'>
+        <view class='title1'>限时秒杀<view class="line_text"></view></view>
+        <view class='title2'>库存锁定安心采购</view>
+      </view>
+      <view class='active-model-list'>
+        <view class='active-model-list-item' wx:for="{{activitySkills}}">
+          <GoodsList bindgoGoodsInfo='goGoodsInfo' goodsInfo="{{item}}" />
+        </view>
+      </view>
+      <i-load-more wx:if="{{loadMorelist[0].getMoreText!='已经到底了'}}"  tip="{{loadMorelist[0].getMoreText}}" loading="{{ loadMorelist[0].getMoreTextLoad }}" bindhandleClick="getMore" data-type='1'/>
+    </view>
+
+    <view class='active-model' wx:if="{{activityDisocunts.length>0}}">
+      <view class='title'>
+        <view class='title1'>品牌特卖<view class="line_text"></view></view>
+        <view class='title2'>疯狂补贴折扣更低</view>
+      </view>
+      <view class='active-model-list'>
+        <view class='active-model-list-item' wx:for="{{activityDisocunts}}">
+          <GoodsList bindgoGoodsInfo='goGoodsInfo' goodsInfo="{{item}}" priceViewType='2' ispop="{{false}}"/>
+        </view>
+      </view>
+      <view><i-load-more wx:if="{{loadMorelist[3].getMoreText!='已经到底了'}}" tip="{{loadMorelist[3].getMoreText}}" loading="{{ loadMorelist[3].getMoreTextLoad}}" bindhandleClick="getMore" data-type='4'/></view>
+   
+    </view>
+
+    <view class='active-model' wx:if="{{activityNews.length>0}}">
+      <view class='title'>
+        <view class='title1'>新品上架<view class="line_text"></view></view>
+        <view class='title2'>抢先采购新品牌</view>
+      </view>
+      <view class='active-model-list'>
+        <view class='active-model-list-item' wx:for="{{activityNews}}">
+          <GoodsList bindgoGoodsInfo='goGoodsInfo' goodsInfo="{{item}}" ispop="{{false}}" />
+        </view>
+
+      </view>
+      <i-load-more wx:if="{{loadMorelist[2].getMoreText!='已经到底了'}}" tip="{{loadMorelist[2].getMoreText}}" loading="{{ loadMorelist[2].getMoreTextLoad }}" bindhandleClick="getMore" data-type='3'/>
+    </view>
+
+    <view class='active-model' wx:if="{{activityPopulars.length>0}}">
+      <view class='title'>
+        <view class='title1'>热销商品<view class="line_text"></view></view>
+        <view class='title2'>大家都在采购的爆款</view>
+      </view>
+      <view class='active-model-list'>
+        <view class='active-model-list-item' wx:for="{{activityPopulars}}">
+          <GoodsList bindgoGoodsInfo='goGoodsInfo' goodsInfo="{{item}}" ispop="{{false}}" />
+        </view>
+      </view>
+      <i-load-more wx:if="{{loadMorelist[1].getMoreText!='已经到底了'}}"  tip="{{loadMorelist[1].getMoreText}}" loading="{{ loadMorelist[1].getMoreTextLoad }}" bindhandleClick="getMore" data-type='2'/>
+    </view>
+  </view>
+  <i-spin fix wx:if="{{ spinShow }}"></i-spin>
+  <i-toast id="toast" />
+</view>

@@ -1,0 +1,49 @@
+.container{
+  background: #fff;
+}
+.banner-bg{
+  width: 100%;
+  height: 720rpx;
+  position: relative;
+}
+
+.nav{
+
+}
+.active-models{
+  margin-top:130rpx;
+  overflow:hidden;
+  padding-bottom: 20rpx;
+}
+.active-models .active-model{
+  margin-bottom: 64rpx;
+}
+.active-models .active-model .title{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.active-models .active-model .title .title1{
+  font-size: 36rpx;
+  color: #484A4C;
+  font-weight: bold;
+ 
+}
+.active-models .active-model .title .title1 .line_text{
+  background: #59A0A6;
+  height: 12rpx;
+  margin-top: -22rpx;
+}
+
+.active-models .active-model .title .title2{
+  font-size: 20rpx;
+  color: #59A0A6;
+  line-height: 75rpx;
+  margin-left: 12rpx;
+}
+.active-models .active-model .active-model-list{
+  margin-top:30rpx;
+}
+.active-models .active-model .active-model-list .active-model-list-item{
+  /* margin-bottom: 60rpx; */
+}
